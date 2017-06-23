@@ -33,11 +33,8 @@ class ZoomAPI{
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postFields);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); 
 		$response = curl_exec($ch);
-
-		/*Check for any errors*/
-		$errorMessage = curl_exec($ch);
-		echo $errorMessage;
-		curl_clost($ch);
+		
+		curl_close($ch);
 
 		/*Will print back the response from the call*/
 		/*Used for troubleshooting/debugging		*/
