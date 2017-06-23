@@ -45,7 +45,7 @@ class ZoomAPI{
 			return false;
 		}
 		/*Return the data in JSON format*/
-		return json_encode($response);
+		return json_decode($response);
 	}
 	/*Functions for management of users*/
 
