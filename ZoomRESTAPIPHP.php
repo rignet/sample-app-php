@@ -9,6 +9,28 @@ class ZoomAPI{
 	private $api_secret = 'Please Input Your Own API Secret Here';
 	private $api_url = 'https://api.zoom.us/v1/';
 
+	/**
+	 * Set API key
+	 *
+	 * @param string $api_key API key (REQUIRED)
+	 * @return string API key
+	 */
+	public function setAPIKey($api_key){
+		$this->api_key = $api_key;
+		return $this->api_key;
+	}
+	
+	/**
+	 * Set API secret
+	 *
+	 * @param string $api_secret API secret (REQUIRED)
+	 * @return string API secret
+	 */
+	public function setAPISecret($api_secret){
+		$this->api_secret = $api_secret;
+		return $this->api_secret;
+	}
+	
 	/*Function to send HTTP POST Requests*/
 	/*Used by every function below to make HTTP POST call*/
 	function sendRequest($calledFunction, $data){
